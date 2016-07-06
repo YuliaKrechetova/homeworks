@@ -12,8 +12,22 @@
     </style>
 </head>
 <body>
-<div id="sale"></div>
-<div id="promo"></div>
+<div id="sale">
+    <p class="title">Распродажа</p>
+    <div class="products-container"> 
+        <script type="text/template" id="menu-template">
+            <span class="title"><%-title%></span>
+            <ul>
+                <% items.forEach(function(item) { %>
+                <li><%-item%></li>
+                <% }); %>
+            </ul>
+        </script>
+    </div>
+</div>
+<div id="promo">
+    <p>Промо-акция</p>
+</div>
 <div id="recommended"></div>
 
 <!-- Шаблон lodash -->
