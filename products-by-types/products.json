@@ -1,9 +1,9 @@
-[
+{"data": [
   {
     "name": "Шампунь для поврежденных волос So Long Damage",
     "pic": "Total_Results_So_Long_Damage_Shampoo_TR-SLD-S_2.jpg",
     "price": 268,
-    "type": "sale"
+    "type": "sale"  
   },
   {
     "name": "Шампунь Oil Wonders Volume Rose",
@@ -47,4 +47,6 @@
     "price": 293,
     "type": "recommended"
   }
-]
+],
+"success": true
+}

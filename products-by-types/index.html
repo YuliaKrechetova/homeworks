@@ -5,6 +5,7 @@
     <title>Товары</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         body {
             margin: 40px;
@@ -12,31 +13,42 @@
     </style>
 </head>
 <body>
+<h1>Уход за волосами</h1>
 <div id="sale">
-    <p class="title">Распродажа</p>
-    <div class="products-container"> 
-        <script type="text/template" id="menu-template">
-            <span class="title"><%-title%></span>
-            <ul>
-                <% items.forEach(function(item) { %>
-                <li><%-item%></li>
-                <% }); %>
-            </ul>
-        </script>
+    <h2>Распродажа</h2>
+    <div id="on-sale-container">         
     </div>
 </div>
 <div id="promo">
-    <p>Промо-акция</p>
+    <h2>Промо-акция</h2>
+    <div id="promo-container">
+    </div>
 </div>
-<div id="recommended"></div>
+<div id="recommended">
+    <h2>Рекомендуемые</h2> 
+    <div id="recommended-container">        
+    </div>
+</div>
 
 <!-- Шаблон lodash -->
+
+<script type="text/template" id="menu-template">
+    <ul class="container-fluid list-unstyled">
+        <% data.forEach(function(item) { %>
+        <li class="col-md-4">
+            <p><img src="media/products/<%-item.pic%>"></p>
+            <h3 class="product-name"><%-item.name%></h3>
+            <p>Цена: <%-item.price%>&#8381;</p>
+        </li>
+        <% }); %>
+    </ul>
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"
         integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
 <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-<script src="script.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
